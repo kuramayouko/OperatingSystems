@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas Operacionais</title>
+    <meta name="description" content="Sistemas Operacionais - Resumo">
+    <meta name="author" content="1749200" >
+    <link rel="stylesheet" href="style.css?">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar clear nav-top">
+        <div class="row content">
+            <a href="https;//www.utfpr.edu.br"><img class="logo" src="http://www.utfpr.edu.br/++theme++utfpr_branco/img/logo.png"></a>
+            <a class="right" style="text-decoration: underline;" href="https://drive.google.com/file/d/1Vgiy-ftdK4EtlQGZA8a63DQtOzUw8PMj/view?usp=drive_link"><i class="fas fa-book"></i>&nbsp;Versão PDF</a>
+            <a class="right" href="mailto:homero@alunos.utfpr.edu.br" target="_blank"><i class="fas fa-paper-plane"></i>&nbsp; homero@alunos.utfpr.edu.br</a>
+        </div>
+    </div>
+    <div class="container clear">
+        <div class="row wrapper">
+
+            <div class="sidepanel">
+
+				<a class="title" href="#">Materiais</a>
+				
+				<div class="divider left"></div>
+	
+                <a class="title" href="#introducao">Introdução</a>
+					<a class="section" href="#evolucaosistemas">Contexto Historico</a>
+						<a class="sub-section" href="#primeirageracao">Primeira Geração</a>
+						<a class="sub-section" href="#segundageracao">Segunda Geração</a>
+						<a class="sub-section" href="#terceirageracao">Terceira Geração</a>
+						<a class="sub-section" href="#quartageracao">Quarta Geração</a>
+					<a class="section" href="#funcaosistema">Funções do S.O</a>
+						<a class="sub-section" href="#gerenciamentocpumemoria">Processos & Memoria</a>
+						<a class="sub-section" href="#gerenciamentoarquivos">Arquivos</a>
+						<a class="sub-section" href="#gerenciamentodispositivos">Dispositivos</a>
+						<a class="sub-section" href="#gerenciamentointerface">Interface</a>
+						<a class="sub-section" href="#gerenciamentosegurancaprotecao">Segurança & Proteção</a>
+						<a class="sub-section" href="#gerenciamentoredecomunicacao">Rede & Comunicação</a>
+
+                <div class="divider left"></div>
+
+                <a class="title" href="#tiposdesistemas">Tipo de Sistemas</a>
+					<a class="section" href="#sobatch">Processamento em Lote</a>
+					<a class="section" href="#somultiprogramacao">Multiprogramacao</a>
+					<a class="section" href="#sotimesharring">Tempo Compartilhado</a>
+					<a class="section" href="#sonetwork">Rede</a>
+					<a class="section" href="#sorealtime">Tempo Real</a>
+
+                <div class="divider left"></div>
+
+                <a class="title" href="#estruturaso">Conceitos de S.O</a>
+					<a class="section" href="#kernel">Kernel</a>
+					<a class="section" href="#shell">Shell</a>
+					<a class="section" href="#systemcalls">System Calls</a>
+					
+				<div class="divider left"></div>
+
+                <a class="title" href="#kernel_types">Tipos De Kernel</a>
+					<a class="section" href="#kernel_microkernel">Microkernel</a>
+					<a class="section" href="#kernel_monolitico">Kernel Monolítico</a>
+					<a class="section" href="#kernel_hibrido">Kernel Híbridos</a>
+					<a class="section" href="#kernel_nano">Nanokernels</a>
+					<a class="section" href="#kernel_exo">Exokernels</a>
+            
+             <div class="divider left"></div>
+             
+             <a class="title" href="#processos_threads">Processos e Threads</a>
+				<a class="section" href="#processo">Processo</a>
+				<a class="section" href="#escalonamento">Escalonamento</a>
+				<a class="section" href="#process_ipc"> Comunicação IPC</a>
+				<a class="section" href="#threads">Threads</a>
+				<a class="section" href="#gerenciamento_memoria">Memória</a>
+				<a class="section" href="#gerenciamento_io">Dispositivos I/O</a>
+				<a class="section" href="#gerenciamento_arquivos">Sistemas de Arquivos</a>
+			
+			<div class="divider left"></div>
+			<a class="title" href="#bibliografia">Bibliografia</a>
+				
+				
+				<a class="section" href="#"></a>
+             
+             <div class="space double"></div>
+
+            </div>
+
+            <div class="right-col">
+            
+				<h1>Materiais de estudo</h1>
+				
+				<p align="justify">&nbsp;&nbsp;&nbsp;
+                Abaixo se encontram links para os slides e videos dos temas abordados nesta pagina:
+                </p>
+
+				<a href="https://drive.google.com/drive/folders/1lmLYj49dDMIzBfEXk-izPhEeikCNatJi?usp=sharing"><center><img srcset="./img/gdrive.png 3x"/></center></a>
+				<a href="https://www.youtube.com"><center><img srcset="./img/youtube.png 3x"/></center></a>
+				
+				<br><br><br>
+				
+				<br id="introducao">
+                <h1>Sistemas Operacionais</h1>
+                
+                <center><img srcset="./img/os_logos.jpg 2x" title="Diferentes tipos de sistemas operacionais."/></center>
+                <br>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                 Um sistema operacional comunmente abreviado pela sigla (S.O) é um programa de software que serve como base para gerenciar e controlar 
+                 os recursos de hardware e software de um computador. Ele atua como intermediário entre o usuário e o hardware, lidando com tarefas 
+                 essenciais, como gerenciamento de processos, gerenciamento de memória, gerenciamento de sistema de arquivos, gerenciamento de dispositivos
+                  e gerenciamento de interface do usuário.
+                 <br>&nbsp;&nbsp;&nbsp;
+				 O sistemas operacional permite que várias aplicacoes sejam executados simultaneamente tendo seus recursos alocados automaticamente para 
+				 diferentes processos. Eles também desempenham um papel crucial na garantia da segurança do sistema, implementando controles de acesso, 
+				 autenticação do usuário e mecanismos de proteção contra acesso não autorizado e software mal-intencionado e mecanismos para sincronização 
+				 e comunicação de processos, garantindo que os aplicativos possam compartilhar dados e comunicar-se entre si efetivamente
+				 <br>&nbsp;&nbsp;&nbsp;
+				 Em Resumo, um sistema operacional é o componente de software fundamental que permite a operação eficaz e eficiente de um sistema de computador,
+				  fornecendo uma interface perfeita entre o usuário e os recursos subjacentes de hardware e software, ao final desta leitura voce será capaz de
+				   entender como um sistema operacional funciona.
+                </p>
+            
+				<br id="evolucaosistemas">
+				
+                <h2>Contexto Historico</h2>
+             
+                <p>Os sistemas operacionais passaram por inumeras transformações tecnologicas, cada era trouxe 
+                avanços significativos em tecnologia, recursos e experiências do usuário. A seguir, vamos mergulhar na história dos sistemas operacionais, 
+                explorando as características e diferenças entre cada geração e tipo de sistema operacional.</p>
+
+				<br id="primeirageracao">
+                <h4>Primeira Geração</h4>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+					A primeira geração de sistemas operacionais surgiu durante a era dos computadores a vácuo. Esses sistemas eram principalmente
+                 sistemas de processamento em lote, nos quais os programas eram enviados em cartões perfurados ou fita de papel. Eles tinham recursos limitados, 
+                 não tinham interação com o usuário e se concentravam na execução de um programa por vez. Exemplos notáveis incluem o Manchester Mark 1 e o UNIVAC I.
+                  Esses sistemas dependiam fortemente da programação em nível de hardware e careciam de recursos como multitarefa e proteção de memória.</p>
+                
+                <br id="segundageracao">
+                <h4>Segunda Geração</h4>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                A segunda geração viu o surgimento de computadores baseados em transistores, permitindo máquinas menores e mais rápidas. Os sistemas operacionais
+                 durante essa época introduziram avanços significativos, como o conceito de multiprogramação. Isso permitiu que vários programas residissem na memória
+                  simultaneamente, reduzindo o tempo ocioso e aumentando a eficiência geral do sistema. Sistemas operacionais notáveis desta geração incluem o SHARE Operating
+                   System (SOS) da IBM e o Burroughs MCP. Sistemas de compartilhamento de tempo também surgiram, permitindo que vários usuários interajam com um computador simultaneamente
+                </p>
+
+				<br id="terceirageracao">
+				<h4>Terceira Geração</h4>
+				
+				<p align="justify">&nbsp;&nbsp;&nbsp;
+				A terceira geração marcou uma grande mudança nos sistemas operacionais, impulsionada pelo advento dos circuitos integrados e dos computadores mainframe. 
+				Esses sistemas introduziram sistemas de arquivos hierárquicos, permitindo uma organização e gerenciamento eficiente de dados. Além disso, eles adotaram recursos 
+				de compartilhamento de tempo, dando origem a experiências de computação interativas. Os sistemas operacionais pioneiros desta era incluem o OS/360 da IBM, o TOPS-10 
+				da DEC e o Multics. Técnicas de gerenciamento de memória, como memória virtual, também foram introduzidas para lidar com aplicativos maiores.
+				</p>
+				
+				<br id="quartageracao">
+				<h4>Quarta Geração</h4>
+				
+				<p align="justify">&nbsp;&nbsp;&nbsp;
+				A quarta geração testemunhou o surgimento de computadores pessoais e microprocessadores. Os sistemas operacionais dessa época, como MS-DOS, Apple Macintosh System e Unix,
+				 concentravam-se em melhorar a facilidade de uso e as interfaces gráficas. Eles introduziram conceitos como multitarefa, permitindo que os usuários executassem vários aplicativos 
+				 simultaneamente. Interfaces gráficas de usuário (GUIs) e sistemas de gerenciamento de arquivos tornaram-se mais intuitivos, aprimorando a experiência geral do usuário. 
+				 A introdução de recursos de rede expandiu ainda mais a usabilidade e a conectividade desses sistemas.
+				</p>
+				
+				<br id="funcaosistema">
+				<h2>Funções de um sistemas operacional</h2>
+				
+				<center><img srcset="./img/so_funcoes.png 2x"/></center>
+				
+				<br id="gerenciamentocpumemoria">
+				<h4>Gerenciamento de Processo e Memória</h4>
+				
+				<p align="justify">&nbsp;&nbsp;&nbsp;
+				Uma das principais funções de um sistema operacional é o gerenciamento de processos. Ele lida com a execução de programas ou processos, alocando recursos do sistema como tempo de CPU,
+				 memória e dispositivos de entrada/saída. O sistema operacional garante a utilização justa e eficiente dos recursos, permitindo que vários processos sejam executados simultaneamente 
+				 por meio de técnicas como multitarefa. Ele também gerencia a memória, alocando e desalocando espaço de memória conforme necessário, otimizando assim o desempenho do sistema.
+				</p>
+				
+				<br id="gerenciamentoarquivos">
+				<h4>Gerenciamento de Arquivos</h4>
+				
+				<p align="justify">&nbsp;&nbsp;&nbsp;
+				Os sistemas operacionais fornecem gerenciamento de sistema de arquivos, permitindo que os usuários criem, armazenem, organizem e recuperem arquivos em dispositivos de armazenamento. 
+				Eles fornecem uma estrutura hierárquica para organizar arquivos e diretórios, garantindo fácil acesso e armazenamento eficiente de dados. Os sistemas de arquivos lidam com tarefas 
+				como nomeação de arquivos, gerenciamento de permissões e alocação de arquivos, protegendo a integridade dos dados e facilitando a recuperação eficiente dos dados.
+				</p>
+				
+				<br id="gerenciamentodispositivos">
+				<h4>Gerenciamento de Dispositivos</h4>
+				
+				<p align="justify">&nbsp;&nbsp;&nbsp;
+				Os sistemas operacionais permitem uma comunicação eficiente entre aplicativos e dispositivos periféricos. Drivers de dispositivo, específicos para cada dispositivo, são empregados
+				 para estabelecer essa comunicação. O sistema operacional gerencia esses drivers, permitindo que os aplicativos interajam com dispositivos como impressoras, scanners, placas de rede 
+				 e unidades USB sem problemas. Ele garante que os dispositivos sejam alocados e liberados adequadamente, evitando conflitos e maximizando a utilização do dispositivo.
+				</p>
+				
+				<br id="gerenciamentointerface">
+				<h4>Gerenciamento de Interface</h4>
+				
+				<p align="justify">&nbsp;&nbsp;&nbsp;
+				Os sistemas operacionais fornecem uma interface de usuário que permite aos usuários interagir com o computador de forma eficaz. As Interfaces Gráficas do Usuário (GUIs)
+				 apresentam elementos visuais como ícones, menus e janelas, permitindo uma navegação intuitiva e amigável. As interfaces de linha de comando (CLIs) permitem que os usuários interajam
+				  com o sistema por meio de comandos baseados em texto. As interfaces do usuário facilitam o lançamento de aplicativos, o gerenciamento de arquivos, a definição das configurações do 
+				  sistema e o acesso aos recursos do sistema, aprimorando a experiência geral do usuário.
+				</p>
+				
+				<br id="gerenciamentosegurancaprotecao">
+				<h4>Segurança e Proteção</h4>
+				
+				<p align="justify">&nbsp;&nbsp;&nbsp;
+				Os sistemas operacionais desempenham um papel crucial na garantia da segurança do sistema e na proteção dos dados do usuário. Eles implementam controles de acesso, autenticação de 
+				usuário e mecanismos de criptografia para proteger informações confidenciais. Os sistemas operacionais detectam e impedem o acesso não autorizado, infecções por malware e violações
+				 de dados. Eles fornecem gerenciamento de contas de usuários, concedendo privilégios e restrições específicos a diferentes usuários, mantendo assim a integridade do sistema e protegendo
+				  a privacidade do usuário.
+				</p>
+				
+				<br id="gerenciamentoredecomunicacao">
+				<h4>Rede e Comunicação</h4>
+				
+				<p align="justify">&nbsp;&nbsp;&nbsp;
+				Os sistemas operacionais permitem recursos de rede, permitindo que os computadores se conectem e se comuniquem entre si. Eles fornecem protocolos e serviços para comunicação de rede, 
+				permitindo tarefas como compartilhamento de arquivos, acesso a recursos remotos e estabelecimento de conexões com a Internet. Os sistemas operacionais lidam com configurações de rede, 
+				roteamento e transmissão de dados, promovendo conectividade e colaboração perfeitas entre os usuários.
+				</p>
+                 
+        <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+				<br id="tiposdesistemas">
+                <h1>Tipos de Sistemas Operacionais</h1>
+				
+				<br id="sobatch">
+                <h2>Sistema operacional de processamento em lote</h2>
+                
+                <center><img srcset="./img/batch_systems.png 1.5x" title="Exemplo de um diagrama de um sistema operacional de processamento em lote."/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                Os sistemas operacionais de processamento em lote eram predominantes nos primeiros dias da computação. Eles executam uma sequência de programas sem interação do usuário, onde os trabalhos 
+                 são enviados em lotes em cartões perfurados ou fita. O sistema operacional lê o lote de jobs e os executa um após o outro, proporcionando eficiência no processamento de dados em larga escala.
+                  Os sistemas de processamento em lote são adequados para tarefas como processamento de folha de pagamento, análise de dados grandes e cálculos repetitivos.
+                <br>
+                <ul><b>Vantagens:</b>
+                <li>Processa com eficiência grandes volumes de dados sem interação do usuário.</li>
+				<li>Otimiza os recursos do sistema executando tarefas em lotes, minimizando o tempo ocioso.</li>
+				<li>Adequado para tarefas que exigem alto rendimento, como processamento de folha de pagamento e análise de dados.</li>
+				<br><b>Desvantagens:</b>
+				<li>Falta de interação e capacidade de resposta do usuário.</li>
+				<li>Flexibilidade limitada, pois as tarefas são processadas sequencialmente sem interromper a execução.</li>
+				</ul>
+                </p>
+                
+                <br id="somultiprogramacao">
+                <h2> Sistema operacional de multiprogramação</h2>
+                
+                <center><img srcset="./img/multiprograming_system.png 1.5x" title="Exemplo de um diagrama de um sistema operacional de multiprogramação."/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                Os sistemas operacionais de multiprogramação visam maximizar a utilização da CPU, permitindo que vários programas residam na memória simultaneamente. Isso permite uma 
+                troca eficiente entre programas, reduzindo o tempo ocioso. O sistema operacional aloca recursos dinamicamente, garantindo acesso justo ao tempo de CPU, memória e outros 
+                recursos. Os sistemas de multiprogramação aprimoram a taxa de transferência e a capacidade de resposta do sistema, tornando-os adequados para cenários em que vários usuários 
+                ou processos precisam ser executados simultaneamente.
+                <br>
+                <ul><b>Vantagens:</b>
+                <li>Maximiza a utilização da CPU permitindo que vários programas residam na memória simultaneamente.</li>
+				<li>Melhora a taxa de transferência e a capacidade de resposta do sistema, reduzindo o tempo ocioso.</li>
+				<li>Oferece suporte à execução simultânea de diversos aplicativos ou processos.</li>
+				<br><b>Desvantagens:</b>
+				<li>Os desafios de alocação de recursos surgem devido ao compartilhamento dinâmico dos recursos do sistema.</li>
+				<li>O gerenciamento complexo de recursos compartilhados pode levar a possíveis conflitos ou atrasos.</li>
+				</ul>
+                </p> 
+                				
+                <br id="sotimesharring">
+                <h2>Sistema operacional de compartilhamento de tempo</h2>
+                
+                <center><img srcset="./img/timesharring_system.png 2x" title="Exemplo de um diagrama de um sistema operacional de tempo compartilhado."/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                Os sistemas operacionais de compartilhamento de tempo levam a multiprogramação um passo adiante, permitindo que vários usuários interajam com o sistema simultaneamente. 
+                Eles dividem o tempo da CPU em pequenas fatias de tempo, alocando tempo para cada usuário ou processo. Os usuários podem executar tarefas interativas e o sistema 
+                responde rapidamente às suas entradas. Os sistemas de compartilhamento de tempo fornecem uma experiência de computação responsiva e interativa, tornando-os ideais para cenários 
+                como programação interativa, transações online e aplicativos baseados em terminal.
+                <br>
+                <ul><b>Vantagens:</b>
+                <li>Permite que vários usuários interajam com o sistema simultaneamente.</li>
+				<li>Fornece tempos de resposta rápidos e experiências de computação interativas.</li>
+				<li>Suporta corte de tempo eficiente, garantindo acesso justo aos recursos do sistema.</li>
+				<br><b>Desvantagens:</b>
+				<li>Aumento da sobrecarga devido à alternância frequente de contexto entre as tarefas do usuário.</li>
+				<li>A contenção de recursos pode afetar o desempenho do sistema quando vários usuários acessam recursos simultaneamente.</li>
+				</ul>
+                </p> 
+                				
+                <br id="sonetwork">
+                <h2>Sistema operacional de rede</h2>
+                
+                <center><img srcset="./img/network_system.png 1.5x" title="Exemplo de comunicação de um sistema operacional de rede servidor com seus clientes."/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                Os sistemas operacionais de rede são projetados para suportar ambientes de computação distribuídos. Eles fornecem recursos para gerenciar e coordenar recursos em uma rede de computadores.
+                 Os sistemas operacionais de rede permitem o compartilhamento de arquivos e impressoras, autenticação de usuário centralizada e protocolos de comunicação de rede. Eles facilitam a colaboração,
+                  o compartilhamento de dados e o compartilhamento de recursos entre várias máquinas, tornando-os essenciais para empresas e organizações com ambientes de computação em rede.
+                <br>
+                <ul><b>Vantagens:</b>
+                <li>Permite o compartilhamento de recursos e dados entre computadores interconectados.</li>
+				<li>Gerenciamento centralizado de usuários, arquivos e impressoras, facilitando a administração.</li>
+				<li>Melhora a colaboração e a comunicação em ambientes de rede.</li>
+				<br><b>Desvantagens:</b>
+				<li>Dependência de conectividade de rede; a disponibilidade do sistema pode ser afetada por interrupções na rede.</li>
+				<li>Aumento dos riscos de segurança devido a recursos compartilhados e possíveis vulnerabilidades na rede.</li>
+				</ul>
+                </p> 
+                				
+                <br id="sorealtime">
+                <h2>Sistema operacional de tempo real</h2>
+                
+                <center><img srcset="./img/realtime_system.png 3x" title="Exemplo de aplicação de sistemas críticos que utilizam sistemas operacionais de tempo real."/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                Os sistemas operacionais em tempo real priorizam a execução de tarefas com base em restrições de tempo rígidas. Eles são usados em aplicações onde a resposta oportuna a eventos é crítica,
+                 como aeroespacial, automação industrial e sistemas médicos. O RTOS garante que as tarefas cumpram seus prazos, empregando algoritmos de agendamento determinísticos e fornecendo mecanismos 
+                 para priorização e sincronização de tarefas em tempo real. Esses sistemas garantem tempo e resposta precisos, tornando-os cruciais em ambientes de tempo crítico.
+                <br>
+                <ul><b>Vantagens:</b>
+                <li>Garante uma resposta oportuna a eventos e tarefas críticas.</li>
+				<li>Oferece suporte a agendamento determinístico e temporização precisa, vital para aplicativos de tempo crítico.</li>
+				<li>Garante alta confiabilidade e previsibilidade em ambientes de tempo real.</li>
+				<br><b>Desvantagens:</b>
+				<li>Complexidade no design e desenvolvimento, muitas vezes exigindo conhecimento especializado do hardware.</li>
+				<li>Flexibilidade limitada devido a restrições de tempo estritas, tornando-o inadequado para tarefas não em tempo real.</li>
+				</ul>
+                </p> 
+
+				<br id="estruturaso">
+                <h2>Conceitos dos Sistemas Operacionais</h2>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                Os sistemas operacionais (SO) possuem uma estrutura complexa que engloba diversos componentes e funcionalidades como vista arteriomente. Agora vamos nos aprofundar em alguns elementos 
+                da importates dos sistemas operacionais, destacando os elementos principais, como chamadas de sistemas, programas de sistema e diferentes abordagens na estrutura de seu nucleo.
+                </p>
+                
+                <br id="kernel">
+                <h2>Kernel</h2>
+                
+                <center><img srcset="./img/kernel.png 2x" title="Imagem mostrando um exemplo das camadas de um Sistema Operacional."/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+				O kernel(nucleo) atua como uma camada intermediária, abstraindo as complexidades do hardware e fornecendo uma interface padronizada para os programas de software interagirem com o sistema. 
+				Ele lida exclusivamente com tarefas de baixo nível, como gerenciamento de memória, escalonamento de processos, drivers de dispositivos e operações de entrada/saída. Vamos explorar alguns exemplos
+				 praticos que mostram o papel do kernel:
+                <br>&nbsp;&nbsp;&nbsp;
+                <b>Exemplo 1: Gestão de Processos </b>- Quando um usuário executa vários aplicativos simultaneamente, o kernel lida com o gerenciamento de processos. Ele cria e gerencia processos individuais, 
+                aloca recursos do sistema (como tempo de CPU e memória) para cada processo e garante sua execução adequada.
+                <br>&nbsp;&nbsp;&nbsp;
+                <b>Exemplo 2: Gerenciamento de memória</b>- Quando um programa de usuário solicita memória, o kernel aloca o espaço necessário, rastreia o uso da memória e lida com a desalocação de memória 
+                quando o programa termina de ser executado. É responsável por gerenciar os recursos do sistema, fornecer serviços essenciais e permitir a comunicação entre os componentes de software e hardware.
+                </p>
+                
+                <br id="shell">
+                <h2>Shell</h2>
+                
+                <center><img srcset="./img/shell_linux.png 2x" title="Exemplo de uma interface Shell Linux."/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+				O shell é um programa que fornece uma interface de linha de comando (CLI) ou interface gráfica do usuário (GUI) por meio da qual os usuários podem interagir com o sistema operacional. 
+				Ele serve como intermediário entre o usuário e o sistema operacional, aceitando comandos do usuário e executando-os em nome do sistema desde de que o mesmo possua privalegios para executa-los.
+				<br>&nbsp;&nbsp;&nbsp;
+                <b>Exemplo 1: Manipulação de arquivos </b>- Um usuário pode emitir comandos por meio do shell para criar, copiar, mover ou excluir arquivos. Por exemplo, o comando "touch texto.txt" cria 
+                um novo arquivo de texto, enquanto "cp arquivo1.txt arquivo2.txt" copia arquivo1.txt para arquivo2.txt. O shell interpreta esses comandos e se comunica com o kernel para executar as operações de 
+                arquivo solicitadas.
+                <br>&nbsp;&nbsp;&nbsp;
+                <b>Exemplo 2: Execução do Processo </b>- Por meio do shell, os usuários podem iniciar e gerenciar processos. Por exemplo, emitir o comando "firefox" inicia o navegador Firefox como um novo 
+                processo. O shell interage com o kernel para iniciar o processo e fornecer uma interface de usuário para controlá-lo.
+                </p>
+                
+                <br id="systemcalls">
+                <h2>System Calls</h2>
+                
+                <center><img srcset="./img/system_calls.png 1x" title="Exemplo de chamada de sistemas do linux."/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+				System Calls ou chamadas de sistema são um mecanismo fundamental em sistemas operacionais que permitem que programas em nível de usuário solicitem serviços do kernel. Eles fornecem uma maneira 
+				para os programas acessarem e utilizarem as funcionalidades do sistema operacional, como realizar operações de entrada/saída, criar ou gerenciar processos, acessar arquivos e se comunicar com 
+				dispositivos. Quando um programa de usuário precisa interagir com o kernel ou acessar recursos privilegiados, ele faz uma chamada de sistema, fazendo a transição efetiva do modo de usuário para 
+				o modo de kernel. A chamada do sistema atua como uma interface entre os programas do usuário e o kernel, permitindo acesso controlado e seguro aos serviços do sistema operacional.As chamadas do 
+				sistema são normalmente invocadas por meio de funções dedicadas ou instruções fornecidas pela linguagem de programação ou API do sistema operacional. Essas funções fornecem uma maneira 
+				padronizada para os programadores interagirem com o sistema operacional.
+				<br>&nbsp;&nbsp;&nbsp;
+                <b>Exemplo 1: Operações de E/S de arquivo </b>- Os programas do usuário podem utilizar chamadas de sistema para ler ou gravar em arquivos. Por exemplo, a chamada do sistema
+                 "open(nome do arquivo, modo)" abre um arquivo, "read(nome do arquivo, buffer, tamanho)" lê dados de um arquivo e "write(nome do arquivo, buffer, tamanho)" grava dados em um arquivo, 
+                 Essas chamadas de sistema permitem que os programas executem operações de entrada/saída de arquivos.
+                <br>&nbsp;&nbsp;&nbsp;
+                <b>Exemplo 2: Comunicação de rede </b>- As chamadas de sistema facilitam a comunicação de rede em programas de usuário. Por exemplo, um programa pode usar chamadas de sistema como 
+                "socket(domínio, tipo, protocolo)" para criar um socket de rede, "connect(socket, endereço, porta)" para estabelecer uma conexão com um servidor remoto e "send(socket , data, tamanho)" 
+                para enviar dados pela rede.
+                <br>&nbsp;&nbsp;&nbsp;
+                <b>Exemplo 3: Controle de Processo </b>- As chamadas do sistema permitem que os programas do usuário gerenciem os processos. Por exemplo, "fork()" cria um novo processo, 
+                "execve(nome do arquivo, argumentos, ambiente)" carrega e executa um arquivo de programa e "wait(pid)" aguarda o término de um processo específico. Essas chamadas de sistema permitem o 
+                controle e a sincronização do processo.
+                </p>
+                
+                <br id="kernel_types">
+                <h2>Tipos De Kernel</h2>
+                
+                <center><img srcset="./img/kernel_types.png 1x" title="Tipos mais comuns de Kernels."/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+				Como visto anteriormente Kernels são os principais componentes dos sistemas operacionais que facilitam a comunicação entre hardware e software. Eles lidam com tarefas críticas, como 
+				gerenciamento de recursos, agendamento de processos e interação com dispositivos. Entretanto ha diferentes tipos de kernels na qual abordaremos a seguir.
+                </p>
+                
+                <br id="kernel_microkernel">
+                <h2>Microkernel</h2>
+                
+                <center><img srcset="./img/kernel_microkernel.png 1x" title="Representação de um Kernel Microkernel."/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                Os microkernels seguem uma filosofia de design minimalista, mantendo a funcionalidade do kernel mínima e delegando a maioria dos serviços do sistema operacional aos processos do espaço do
+                 usuário. As características dos microkernels (MINIX e QNX) incluem:
+                <ul>
+					<li>A funcionalidade básica, como escalonamento de processos e comunicação entre processos, é fornecida pelo kernel.</li>
+					<li>Serviços adicionais, como drivers de dispositivos e sistemas de arquivos, são implementados como processos separados no nível do usuário chamados servidores.</li>
+					<li>Melhor estabilidade e segurança do sistema devido ao isolamento de componentes críticos do kernel.</li>
+				</ul>
+                </p>
+                
+                <br id="kernel_monolitico">
+                <h2>Kernel Monolíticos</h2>
+                
+                <center><img srcset="./img/kernel_monolithic.png 1x" title="Representação de um Kernel Monolítico."/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                Os kernels monolíticos são o tipo tradicional de kernels em que todo o sistema operacional é executado como um único programa grande no espaço do kernel. Os principais recursos dos kernels
+                 monolíticos (Linux com módulos de kernel carregáveis opcionais e versões mais antigas do UNIX) incluem:
+                <ul>
+					<li>Todos os serviços do sistema operacional, drivers de dispositivo e implementações de chamada do sistema residem no espaço do kernel.</li>
+					<li>Fortes interdependências entre os componentes do kernel, resultando em um desempenho do sistema mais eficiente.</li>
+				</ul>
+                </p>
+                
+                <br id="kernel_hibrido">
+                <h2>Kernel Híbridos</h2>
+                
+                <center><img srcset="./img/kernel_hybrid.png 1x" title="Representação de um Kernel Hibrido."/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                Os kernels híbridos combinam elementos monolíticos e microkernels, com o objetivo de encontrar um equilíbrio entre desempenho e modularidade. Eles fornecem um kernel com um
+                 conjunto mínimo de serviços, permitindo que alguns drivers de dispositivo e serviços sejam executados no espaço do kernel. As principais características dos kernels híbridos
+                  (Windows NT e macOS) incluem:
+                <ul>
+					<li>Serviços essenciais, como gerenciamento de memória e agendamento, são implementados no espaço do kernel.</li>
+					<li>Serviços adicionais, como sistemas de arquivos e drivers de dispositivo, podem ser executados no kernel ou como processos do espaço do usuário.</li>
+					<li>Melhor flexibilidade e extensibilidade em comparação com kernels monolíticos.</li>
+				</ul>
+                </p>
+                
+                <br id="kernel_nano">
+                <h2>Nanokernels</h2>
+
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+				Os nanokernels são uma versão ainda mais minimalista dos kernels, focando apenas em fornecer abstrações básicas de hardware e deixando todas as outras funcionalidades para processos 
+				de nível de usuário. As características dos nanokernels (L4 e EROS) incluem:
+                <ul>
+					<li>Os nanokernels fornecem apenas as funcionalidades mais essenciais, como tratamento de interrupções e programação básica.</li>
+					<li>Todos os serviços do sistema operacional de nível superior, como sistemas de arquivos e rede, são implementados no espaço do usuário.</li>
+					<li>Oferece flexibilidade e personalização máximas, mas requer um esforço significativo no projeto e implementação de serviços do sistema.</li>
+				</ul>
+                </p>
+                
+                <br id="kernel_exo">
+                <h2>Exokernels</h2>
+
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+				 Exokernels levam o conceito de minimalismo do kernel ao extremo, fornecendo abstrações mínimas e expondo recursos de hardware diretamente para aplicativos de nível de usuário.
+				  Os recursos dos exokernels (XOK e SPIN) incluem:
+                <ul>
+					<li>Expoem abstrações de hardware de baixo nível aos aplicativos do usuário, permitindo controle máximo sobre os recursos do sistema.</li>
+					<li>As bibliotecas ou aplicativos no nível do usuário gerenciam diretamente a alocação e proteção de recursos.</li>
+					<li>Oferece alto potencial para otimização de desempenho, mas requer técnicas de programação sofisticadas.</li>
+				</ul>
+                </p>
+                
+                <br id="processos_threads">
+                <h2>Processos e Threads</h2>
+                
+                <center><img srcset="./img/process_thread.png 1x" title="Imagem mostrando que um processo pode criar varios Threads."/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                Processos e threads são conceitos fundamentais em sistemas operacionais que tratam da execução e gerenciamento de programas e sua execução concorrente dentro de um ambiente computacional. 
+                Esses conceitos são essenciais para entender como os sistemas operacionais lidam com várias tarefas, alocam recursos e permitem a execução paralela.
+                </p>
+                
+                <br id="processo">
+                <h2>Processo</h2>
+                
+                <center><img srcset="./img/process_states.png 1x" title="Diagrama de possiveis estado de um processo."/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                Este representa a unidade básica de trabalho em um sistema de um programa de computador, os dados e os recursos necessários para executar uma tarefa específica. Um processo é criado quando
+                 um programa é iniciado e este existe até que sua execução seja concluída ou finalizada pelo sistema operacional. Cada processo recebe um identificador de processo exclusivo chamdo (PID) para 
+                 distingui-lo de outros processos em execução simultaneamente no sistema. Os processos geralmente são isolados uns dos outros, o que significa que eles têm seu próprio espaço de memória e
+                  são protegidos contra acesso não autorizado ou interferência. Esse isolamento garante que um processo não possa acessar ou modificar diretamente a memória ou os recursos de outro processo,
+                   proporcionando segurança e estabilidade ao sistema. Um processo em um sistema operacional pode existir em vários estados, representando diferentes estágios de seu ciclo de vida e refletindo
+                    sua interação com o sistema operacional. Vamos explorar os estados comuns em que um processo pode estar:
+                <ul>
+					<li><b>Novo:</b> quando um processo é criado pela primeira vez, ele está no estado "novo" ou "criado". Nesta fase, o processo está em inicialização e os recursos necessários estão sendo 
+					alocados para ele pelo sistema operacional.</li>
+					<li><b>Pronto:</b> No estado "pronto", o processo está preparado para executar, mas aguarda que seja alocada para processamento para ele. Ele está na fila de processos prontos para serem executados e, assim 
+					que a CPU estiver disponível, ela poderá fazer a transição para o estado "em execução".</li>
+					<li><b>Executando:</b> Quando um processo está sendo executado pela CPU, ele está no estado "running". A qualquer momento, apenas um processo pode estar em execução em um único núcleo de CPU. O 
+					processo permanece nesse estado até que voluntariamente abandone a CPU ou seja interrompido por um processo de prioridade mais alta.</li>
+					<li><b>Bloqueado (ou Aguardando):</b> Quando um processo não pode prosseguir devido à indisponibilidade de um recurso necessário ou a um evento, ele entra no estado "bloqueado" ou "aguardando".
+					 Isso pode ocorrer quando um processo está aguardando a conclusão de E/S, um sinal ou a liberação de um bloqueio ou semáforo. Uma vez que o recurso ou evento necessário se torna disponível,
+					  o processo pode fazer a transição de volta para o estado "pronto".</li>
+					<li><b>Encerrado:</b> quando um processo conclui sua execução ou é encerrado explicitamente pelo sistema operacional ou por um usuário, ele entra no estado "terminado". Nesta fase, o 
+					sistema operacional libera todos os recursos associados ao processo e o remove do sistema.</li>
+				</ul>&nbsp;&nbsp;&nbsp;
+				Vale a pena notar que diferentes sistemas operacionais podem ter estados de processo adicionais ou ligeiramente diferentes, dependendo de seu projeto e implementação específicos. No entanto, 
+				os estados mencionados acima são os comuns encontrados na maioria dos sistemas operacionais.
+                </p>
+                
+                <br id="escalonamento">
+                <h2>Escalonamento De Processos</h2>
+                
+                <center><img srcset="./img/process_schedulling.png 1x" title="Exemplo de uma diagrama de escalonamento de processos"/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                O escalonamento de processos ou agendamento de processos é uma função central de um sistema operacional que determina a ordem na qual os processos são executados na CPU. Envolve a alocação de
+                 tempo de CPU para diferentes processos, permitindo que eles sejam executados simultaneamente e compartilhem recursos do sistema de forma eficaz. O principal objetivo do escalonamento de 
+                 processos é otimizar a utilização dos recursos do sistema e garantir a justiça entre os processos. Ao gerenciar com eficiência a execução de processos, o escalonamento de processos melhora 
+                 o desempenho, a capacidade de resposta e o rendimento do sistema. Isso ajuda a evitar situações em que os processos monopolizam a CPU, resultando em lentidão ou falta de resposta para outros 
+                 processos e interações do usuário. O escalonamento de processos envolve a seleção de um processo da fila pronta (uma fila de processos esperando para serem executados) e seu envio para a 
+                 CPU para execução. O escalonador decide qual processo deve ser executado a seguir com base nos algoritmos de escalonamento e em vários fatores, como prioridades do processo, requisitos de 
+                 recursos e estado atual do sistema. O escalonamento de processos também envolve considerações como sincronização de processos e comunicação entre processos, onde os processos podem precisar
+                  coordenar e compartilhar dados ou recursos. Mecanismos de sincronização, como travas e semáforos, são usados para evitar conflitos e garantir o acesso ordenado aos recursos compartilhados.
+                  A seguir podemos ver alguns algoritimos de escalonamento:
+                  <ul>
+					<li><b>Round Robin (RR):</b> O algoritmo de escalonamento Round Robin é um algoritmo preemptivo que atribui um quantum de tempo igual a cada processo de maneira cíclica. Cada
+					 processo pode executar por uma fatia de tempo específica (quantum de tempo) antes de ser movido para o final da fila, permitindo que o próximo processo seja executado. Esse 
+					 algoritmo garante justiça, dando a cada processo uma oportunidade igual de execução e é adequado para sistemas de compartilhamento de tempo. No entanto, isso pode levar a um 
+					 aumento da sobrecarga de troca de contexto.<br><b>Exemplo:</b> Considere três processos P1, P2 e P3 com quantum de tempo de 5 milissegundos cada. O escalonador atribui a CPU 
+					 a cada processo de maneira round-robin: P1 executa por 5 ms, depois P2 por 5 ms, seguido por P3 por 5 ms. O ciclo continua até que todos os processos concluam sua execução.</li>
+					<br><li><b>First-In, First-Out (FIFO):</b> O algoritmo de escalonamento FIFO funciona segundo o princípio de "primeiro a chegar, primeiro a ser servido". Cada processo que chega é 
+					colocado no final da fila de processos e a CPU é atribuída ao processo na frente da fila. O processo no início da fila executa até a conclusão e os processos subsequentes são 
+					executados na ordem de sua chegada. O FIFO não é preemptivo, ou seja, uma vez que um processo começa a executar, ele continua até a conclusão, independentemente da chegada de 
+					outros processos.<br><b>Exemplo:</b> Considere três processos P1, P2 e P3 chegando nessa ordem. O escalonador atribui a CPU primeiro a P1, seguida por P2 e finalmente P3. 
+					A ordem de execução permanece inalterada, independentemente do tempo de execução de cada processo.</li>
+					<br><li><b>Shortest Job First (SJF):</b> O algoritmo de escalonamento Shortest Job First seleciona o processo com o menor tempo de burst para execução. Tem como objetivo minimizar 
+					o tempo médio de espera e proporcionar uma eficiência ótima para o sistema. O SJF pode ser preemptivo (conhecido como Shortest Remaining Time First - SRTF) ou não preemptivo,
+					 dependendo se um processo em execução pode ser interrompido por um novo processo com um tempo de burst menor.<br><b>Exemplo:</b> Considere três processos P1, P2 e P3 com respectivos
+					  tempos de burst de 6 ms, 4 ms e 8 ms. O escalonador seleciona P2 (tempo de burst mais curto) primeiro, seguido por P1 e finalmente P3. A ordem de execução é baseada no tempo de 
+					  burst de cada processo.</li>
+					<br><li><b>Shortest Remaining Job Next (SRJN):</b> O algoritmo de agendamento Shortest Remaining Job Next é semelhante ao SJF, mas é de natureza preemptiva. O escalonador seleciona 
+					o processo com o menor tempo de burst restante para execução. Se um novo processo chega com um tempo de burst ainda menor, o processo em execução sofre preempção e é substituído
+					 pelo novo processo. O SRJN visa reduzir o tempo de espera e fornecer melhores tempos de resposta em comparação com outros algoritmos.<br><b>Exemplo:</b> Considere três processos
+					  P1, P2 e P3 com respectivos tempos de burst de 6 ms, 4 ms e 8 ms. O escalonador seleciona P2 (menor tempo restante de burst) primeiro. Se um novo processo com um tempo de
+					   burst mais curto chegar, ele interromperá o processo em execução no momento.</li>
+				</ul>&nbsp;&nbsp;&nbsp;
+				Esses algoritmos de escalonamento de processos fornecem diferentes abordagens para gerenciar a execução de processos em um sistema operacional. A escolha do algoritmo depende
+				 dos requisitos do sistema, das características da carga de trabalho e das métricas de desempenho desejadas.
+                </p>
+                
+                <br id="process_ipc">
+                <h2>Comunicação entre processos (IPC)</h2>
+                
+                <center><img srcset="./img/process_ipc.png 1x" title="Exemplos de 2 tipos de vários IPC"/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                Nos sistemas de operacionais modernos, vários processos geralmente precisam trabalhar juntos, trocar informações e sincronizar suas ações. Essa colaboração é facilitada por meio de mecanismos 
+                de comunicação entre processos (IPC) fornecidos pelo sistema operacional. O IPC permite que os processos se comuniquem, compartilhem dados e coordenem suas atividades, possibilitando o 
+                desenvolvimento de aplicações complexas e interconectadas entre si. O IPC oferece vários benefícios tais como:
+                <ul>
+					<li><b>Colaboração de processos:</b> o IPC permite que os processos trabalhem juntos, compartilhem recursos e resolvam problemas coletivamente.</li>
+					<li><b>Modularidade e reutilização:</b> o IPC permite o desenvolvimento de componentes modulares e reutilizáveis que podem interagir uns com os outros.</li>
+					<li><b>Integração do sistema:</b> o IPC facilita a integração de diversos aplicativos, serviços e componentes em um sistema unificado.</li>
+					<li><b>Computação Distribuída:</b> mecanismos IPC como sockets permitem a comunicação entre processos rodando em diferentes máquinas, possibilitando a computação distribuída.</li>
+				</ul>&nbsp;&nbsp;&nbsp;
+				Existem vários mecanismos IPC disponíveis em sistemas operacionais, cada um adequado para diferentes cenários. A seguir veja alguns mecanismos comumente usados:
+				<ul>
+					<li><b>Memoria compartilhada:</b> A memória compartilhada permite que os processos compartilhem uma parte da memória, chamada de segmento de memória compartilhada. Os processos podem
+					 ler e gravar nessa memória compartilhada, permitindo uma comunicação rápida e eficiente. No entanto, mecanismos de sincronização adequados, como bloqueios ou semáforos, são necessários
+					  para evitar conflitos.</li>
+					<li><b>Passagem de mensagem:</b> A passagem de mensagens envolve enviar e receber mensagens entre processos. As mensagens podem conter dados ou sinais e podem ser enviadas de forma 
+					síncrona ou assíncrona. O sistema operacional fornece chamadas de sistema para processos enviarem e receberem mensagens, garantindo uma comunicação ordenada.</li>
+					<li><b>Pipes e FIFOs:</b> Pipes e FIFOs fornecem canais de comunicação unidirecionais entre os processos. Os pipes são normalmente usados para comunicação entre processos relacionados,
+					 enquanto os FIFOs (pipes nomeados) permitem a comunicação entre processos não relacionados. Os dados gravados em um pipe por um processo podem ser lidos por outro processo conectado 
+					 ao pipe.</li>
+					<li><b>Sockets:</b> Os soquetes oferecem IPC orientado à rede, permitindo que os processos se comuniquem em uma rede usando portas e endereços IP. Sockets podem ser usados para 
+					comunicação entre processos na mesma máquina (endereços de loopback) ou entre processos em máquinas diferentes. Eles são amplamente utilizados para comunicação de rede, como em aplicativos
+					 cliente-servidor.</li>
+				</ul>&nbsp;&nbsp;&nbsp;
+				A comunicação entre processos (IPC) é um conceito fundamental em sistemas operacionais que permite que os processos colaborem, comuniquem-se e sincronizem suas ações. Por meio de vários 
+				mecanismos IPC, os processos podem compartilhar dados, trocar mensagens e trabalhar juntos para realizar tarefas complexas. O IPC desempenha um papel vital na facilitação da modularidade,
+				 integração de sistemas e computação distribuída. Compreender o IPC e seus mecanismos é essencial para o desenvolvimento de aplicações eficientes e interconectadas em ambientes computacionais
+				  modernos
+                </p>
+                
+                <br id="threads">
+                <h2>Threads</h2>
+
+				<center><img srcset="./img/multithread_vs_single.png 1x" title="Comparação de processo single thread e multi thread."/></center>
+
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+				 Nos sistemas operacionais modernos, os threads fornecem um mecanismo poderoso para execução simultânea e paralelismo dentro de um processo. Os threads permitem vários fluxos de execução
+				  em um único processo, permitindo a utilização eficiente dos recursos do sistema e melhorando o desempenho do aplicativo. Um thread pode ser entendido como uma unidade leve de execução 
+				  dentro de um processo. Representa uma sequência independente de instruções que podem ser agendadas e executadas simultaneamente com outras threads. Threads dentro de um processo 
+				  compartilham o mesmo espaço de memória, descritores de arquivo e outros recursos, tornando-os eficientes para comunicação entre threads e compartilhamento de dados. Componentes dos Threads:
+                <ul>
+					<li><b>Thread ID:</b> Cada thread dentro de um processo recebe um identificador exclusivo conhecido como Thread ID. O ID ajuda a diferenciar e identificar threads individuais dentro de
+					 um processo.</li>
+					<li><b>Contador do programa:</b> Um contador de programa (PC) é mantido para cada thread, que mantém o controle da instrução atualmente em execução no código do thread. Ele permite 
+					que o sistema operacional alterne o contexto entre threads e retome a execução a partir do ponto apropriado.</li>
+					<li><b>Conjunto de registro:</b> Os threads têm seu próprio conjunto de registradores, incluindo registradores de uso geral, ponteiros de pilha e outros registradores específicos
+					 da arquitetura. O conjunto de registradores permite que os threads mantenham seu contexto de execução durante as trocas de contexto.</li>
+					<li><b>Pilha:</b> Cada thread possui sua própria pilha, chamada de pilha de threads. A pilha armazena variáveis locais, informações de chamada de função e outros dados relacionados
+					 à execução do thread.</li>
+					<li><b>Estado do Thread:</b> Threads podem existir em diferentes estados durante seu ciclo de vida. Os estados de encadeamento comuns incluem em execução, pronto, bloqueado e 
+					encerrado. O agendador do sistema operacional determina quando fazer a transição de threads entre esses estados com base em fatores como prioridade e recursos disponíveis.</li>
+				</ul>&nbsp;&nbsp;&nbsp;
+				Vamos pensar em im exemplo prático de uso de thread em um aplicativo de servidor da web. Em vez de lidar com cada solicitação de cliente recebida sequencialmente, o que limitaria a escalabilidade,
+				 podemos lidar com várias solicitações simultaneamente. Cada solicitação recebida pode ser atribuída a um thread separado, permitindo que o servidor lide com solicitações simultâneas com 
+				 eficiência. Os threads podem se comunicar e sincronizar suas ações usando mecanismos IPC, como memória compartilhada ou passagem de mensagens. Claramente os Threads oferecem várias vantagens tais como:
+				 <ul>
+					<li><b>Capacidade de resposta aprimorada:</b> ao permitir a execução simultânea em um processo, os threads aprimoram a capacidade de resposta, permitindo a execução paralela de tarefas.</li>
+					<li><b>Desempenho aprimorado:</b> a utilização de vários encadeamentos pode aumentar a taxa de transferência geral de um aplicativo, especialmente em cenários com tarefas intensivas 
+					de CPU ou vinculadas a E/S.</li>
+					<li><b>Utilização eficiente de recursos:</b> Threads compartilham o mesmo espaço de memória e outros recursos de processo, resultando em uso eficiente de memória e sobrecarga reduzida 
+					em comparação com vários processos independentes.</li>
+				</ul>&nbsp;&nbsp;&nbsp;
+				Threads fornecem um poderoso mecanismo para execução simultânea e paralelismo dentro de um processo. Ao habilitar vários fluxos de execução, os threads permitem a utilização eficiente
+				 dos recursos do sistema e aprimoram o desempenho do aplicativo. Compreender os componentes dos encadeamentos, seu ciclo de vida e seu uso pode ajudar os desenvolvedores a projetar e
+				  implementar aplicativos altamente escaláveis e responsivos.
+                </p>
+                
+                <br id="gerenciamento_memoria">
+                <h2>Gerenciamento de memória</h2>
+                
+                <center><img srcset="./img/memory_methods.png 1.5x" title="Tipos mais comuns de metodos de memorias no sistema operacional"/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                O gerenciamento de memória é um aspecto crítico dos sistemas operacionais, responsável por alocar e gerenciar com eficiência os recursos de memória para os processos em execução e 
+                que são fundamentais para o gerenciamento eficaz da memória. Ele garante que cada processo tenha acesso à memória necessária para execução e otimiza a utilização da mesma. A seguir
+                veremos alguns metodos e conceitos mais comuns utilizados pelos Sistemas Operacionais:
+                <ul>
+					<li><b>Memória virtual:</b> A memória virtual é uma técnica de gerenciamento de memória que permite que os processos acessem mais memória do que o que está fisicamente 
+					disponível no sistema. Ele fornece a ilusão de um espaço de endereço maior utilizando armazenamento secundário, geralmente o disco rígido. A memória virtual é dividida 
+					em blocos de tamanho fixo chamados páginas. Cada processo recebe um espaço de endereço virtual que pode ser maior que a memória física. Quando um processo acessa um endereço 
+					de memória virtual, ocorre uma falha de página se a página necessária não estiver presente na memória física. O sistema operacional recupera a página do armazenamento 
+					secundário na memória física.<br><b>Exemplo:</b> Suponha que um sistema tenha 4 GB de memória física e um processo exija 8 GB de memória para ser executado. 
+					Por meio da memória virtual, o processo pode ter um espaço de endereço virtual de 8 GB, enquanto apenas uma parte dele é carregada na memória física a qualquer momento.</li>
+					<br><li><b> Espaço de endereçamento virtual: </b> Cada processo tem seu próprio espaço de endereçamento virtual, que representa o intervalo de endereços que o processo pode 
+					acessar. Isso fornece uma camada de abstração, permitindo que os processos operem em um espaço de endereço maior do que o tamanho da memória física.</li>
+					<br><li><b>Tabelas de páginas:</b> a memória virtual em sistemas operacionais usa tabelas de páginas para mapear endereços virtuais para endereços físicos. As tabelas de páginas
+					 armazenam as informações de mapeamento, indicando a localização da memória física onde reside cada página do processo.</li>
+
+					<br><li><b>Paginação:</b> é uma técnica de gerenciamento de memória virtual que divide a memória física e virtual em páginas de tamanho fixo. O sistema operacional
+					 mapeia essas páginas entre a memória física e a virtual. A vantagem da paginação é que ela permite alocação de memória eficiente e permite que o sistema manipule alocação
+					  de memória não contígua. Também facilita o conceito de paginação sob demanda, em que as páginas são carregadas na memória somente quando necessário.<br><b>Exemplo:</b> 
+					  Suponha que um sistema use páginas de 4 KB. Um processo requer 16 KB de memória. O processo é dividido em quatro páginas de 4 KB e essas páginas podem ser espalhadas em 
+					  diferentes locais da memória física. A tabela de páginas mantém o mapeamento entre as páginas virtuais e físicas.</li>
+					<br><li><b>Entradas da Tabela de Páginas: </b> as entradas da tabela de páginas (PTEs) na tabela de páginas armazenam as informações de mapeamento para cada página virtual.
+					 Eles contêm o endereço físico onde a página reside e bits de controle adicionais.</li>
+					<br><li><b>Falhas de página:</b> quando um processo tenta acessar uma página virtual que não está presente na memória física, ocorre uma falha de página. O sistema operacional
+					 lida com falhas de página carregando a página necessária do armazenamento secundário (por exemplo, disco) em um quadro de página físico disponível.</li>
+					<br><li><b>Algoritmos de substituição de página:</b> se a memória física estiver cheia, o sistema operacional seleciona uma página para remover usando algoritmos de substituição
+					 de página, como menos usado recentemente (LRU), primeiro a entrar, primeiro a sair (FIFO) ou outros. Isso garante que as páginas usadas com frequência permaneçam na memória 
+					 enquanto as páginas usadas com pouca frequência são trocadas para o disco.</li>
+					 
+					<br><li><b>Segmentação:</b> A segmentação é outra técnica de gerenciamento de memória que divide o espaço de endereço lógico de um processo em segmentos de tamanho variável.
+					 Cada segmento representa uma seção diferente do programa, como código, dados, pilha ou heap. A segmentação permite alocação de memória dinâmica e flexibilidade na organização
+					  da memória. A cada segmento é atribuído um endereço base e um limite para definir sua faixa dentro do espaço de endereço lógico.<br><b>Exemplo:</b> Em um processo, o segmento
+					   de código, o segmento de dados e o segmento de pilha podem ter tamanhos diferentes e são atribuídos a endereços e limites de base individuais. Isso permite alocação de
+					    memória eficiente com base nos requisitos específicos de cada segmento.</li>
+					<br><li><b>Descritores de segmento:</b> os descritores de segmento armazenam o endereço base e o comprimento de cada segmento, juntamente com as 
+					permissões de acesso e outros atributos. Eles são usados pelo sistema operacional para converter endereços lógicos em endereços físicos.</li>
+					<br><li><b>Falhas de segmento:</b> semelhantes às falhas de página, as falhas de segmento ocorrem quando um processo tenta acessar um segmento que não está presente na memória 
+					física. O sistema operacional lida com essas falhas carregando o segmento necessário na memória.</li>
+					<br><li><b>Fragmentação:</b> A segmentação em sistemas operacionais pode levar à fragmentação externa, onde a memória livre se torna espalhada em pequenos pedaços entre
+					 os segmentos alocados. Técnicas de compactação podem ser empregadas pelo sistema operacional para reduzir a fragmentação e melhorar a utilização da memória.</li>
+					
+					<br><li><b>Swapping:</b> é uma técnica de gerenciamento de memória usada pelos sistemas operacionais para transferir páginas ou processos inteiros entre a memória física e
+					 o armazenamento secundário, como um disco rígido. Ele permite que o sistema libere espaço na memória física movendo as páginas usadas com menos frequência para o armazenamento
+					  secundário e trazendo páginas mais relevantes quando necessário. É importante observar que a troca gera uma sobrecarga de desempenho devido às operações de E/S de disco envolvidas 
+					  na movimentação de páginas entre a memória física e o armazenamento secundário. A troca excessiva pode levar ao aumento dos tempos de resposta e à redução do desempenho do sistema.</li>
+					<br><li><b>ZRAM:</b> também conhecido como espaço de troca compactado, é um recurso em sistemas operacionais baseados em Linux que fornece um dispositivo de bloco compactado na propria memoria para 
+					armazenamento de Swapping. Ele permite a utilização eficiente dos recursos de memória compactando os dados. É importante observar que o ZRAM pode consumir alguns recursos da CPU
+					 para compactar e descompactar páginas. No entanto, a latência de E/S reduzida fornecida pelo uso de ZRAM pode frequentemente gerar uma sobrecarga da CPU. A ZRAM é particularmente 
+					 benéfica em sistemas com dispositivos de pouca memória, sistemas embarcados ou sistemas com uso intenso de memória. Ele ajuda a melhorar a capacidade de resposta e o desempenho 
+					 do sistema, reduzindo a dependência da troca tradicional baseada em disco, resultando em uma utilização mais eficiente dos recursos de memória.</li>
+				</ul>
+                </p>
+                
+                <br id="gerenciamento_io">
+                <h2>Gerenciamento de I/O</h2>
+                
+                <center><img srcset="./img/process_io.png 1x" title="Diagrama de Entrada e Saida."/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                O gerenciamento de E/S (entrada/saída) é um aspecto crucial dos sistemas operacionais que lida com a comunicação entre o sistema e dispositivos externos. Ele garante 
+                uma transferência de dados eficiente e confiável entre o sistema e os periféricos, como teclados, mouses, discos e interfaces de rede. Vamos explorar os principais componentes e 
+                funções do gerenciamento de E/S:    
+                <ul>
+					<li><b>Drivers:</b> os drivers de dispositivo são componentes de software que facilitam a comunicação entre o sistema operacional e os dispositivos de hardware.
+					 Eles fornecem uma interface padronizada para o sistema operacional interagir com diferentes tipos de dispositivos, lidando com protocolos e operações específicas do dispositivo.</li>
+					<br><li>Agendamento de E/S:<b></b> O agendamento de I/O envolve determinar a ordem na qual as solicitações de I/O são atendidas pelos dispositivos para otimizar o desempenho do sistema.
+					 Diferentes algoritmos de agendamento, como First-Come-First-Serve (FCFS), Shortest Seek Time First (SSTF), são usados para priorizar e agendar operações de E/S de forma eficaz.</li>
+					<br><li><b>Buffering</b> o buffer é um mecanismo que armazena dados temporariamente entre o dispositivo e o sistema operacional. Ele ajuda a superar as diferenças de velocidade 
+					entre os dispositivos e a CPU, permitindo que os dados sejam transferidos em blocos maiores. Os buffers podem ser implementados em diferentes níveis, incluindo buffers no nível
+					 do dispositivo, buffers no nível do kernel e buffers no nível do usuário.</li>
+					<br><li><b>Cache:</b> o armazenamento em cache envolve o armazenamento de dados acessados com frequência em um local mais rápido e próximo, como um cache de memória, 
+					para reduzir as operações de E/S e melhorar o desempenho do sistema. O armazenamento em cache é particularmente útil para E/S de disco, onde os dados acessados com frequência 
+					podem ser armazenados em cache na memória para minimizar os acessos ao disco.</li>
+					<br><li><b>Tratamento de interrupção:</b>   O tratamento de interrupção é um mecanismo que permite que os dispositivos interrompam a CPU e solicitem atenção imediata. Quando um
+					 dispositivo gera uma interrupção, o sistema operacional suspende o processo atual, atende a interrupção e retoma o processo interrompido assim que a operação de E/S é concluída.</li>
+					<br><li><b>DeadLocks:</b> Um deadlock ocorre quando dois ou mais processos não conseguem prosseguir porque cada um está esperando por um recurso mantido por outro processo 
+					no conjunto. Os impasses podem afetar gravemente o desempenho do sistema e devem ser tratados de forma eficaz. Aqui estão algumas características dos impasses e métodos para 
+					lidar com estes impasses:<br><b>Exclusão mútua: </b> cada recurso pode ser atribuído a apenas um processo por vez.<br><b>Hold and Wait:</b> processos retêm recursos enquanto 
+					esperam por outros.<br><b>Sem Preempção:</b> os recursos não podem ser retirados dos processos à força.<br><b>Espera Circular:</b> existe uma cadeia circular de processos, onde 
+					cada processo está esperando por um recurso mantido por outro processo na cadeia.</li>
+					<br><li><b>Lidando com DeadLocks:</b> gerenciar deadlocks é uma tarefa complexa e a escolha do método depende das características do sistema, padrões de uso de recursos 
+					e requisitos de desempenho. Os sistemas operacionais empregam uma combinação de técnicas de prevenção, prevenção, detecção e recuperação para minimizar a ocorrência 
+					de deadlocks e garantir que o sistema funcione corretamente, tais como;<br><b>Prevenção:</b> as técnicas de prevenção de impasse visam eliminar uma ou mais das características 
+					do impasse. Isso pode ser alcançado evitando a exclusão mútua, garantindo a preempção de recursos ou empregando métodos como ordenação de recursos e gráficos de alocação de 
+					recursos.<br><b>Detecção e Recuperação: </b> os algoritmos de detecção de deadlock examinam periodicamente o gráfico de alocação de recursos para identificar 
+					possíveis deadlocks. Se um impasse for detectado, métodos de recuperação podem ser empregados, como encerrar processos envolvidos no impasse ou preempção de recursos para 
+					quebrar o impasse.<br><b>Ignorando e Reiniciando:</b> Em certas situações, os impasses podem ser pouco frequentes ou ter impacto mínimo. Nesses casos, o sistema operacional
+					 pode optar por ignorar os impasses e reiniciar periodicamente o sistema para eliminar possíveis impasses.</li>
+				</ul>&nbsp;&nbsp;&nbsp;
+                </p>
+                
+                <br id="gerenciamento_arquivos">
+                <h2>Sistema de Arquivos</h2>
+                
+                <center><img srcset="./img/file_acess.png 3x" title="Sistema de arquivos contendo vários usuários com diferente arquivos e permissões."/></center>
+                
+                <p align="justify">&nbsp;&nbsp;&nbsp;
+                O sistema de arquivos é um componente crucial de um sistema operacional que gerencia como os arquivos são armazenados, organizados e acessados em dispositivos de armazenamento,
+                 como discos rígidos, unidades de estado sólido e armazenamento em rede. Ele fornece uma estrutura hierárquica para armazenar e organizar arquivos, garantindo armazenamento e 
+                 recuperação de dados eficientes. Vamos explorar alguns conceitos-chave relacionados a sistemas de arquivos:
+                 <ul>
+					<li><b>Arquivos e Diretórios:</b> um arquivo representa uma coleção de dados relacionados, como um documento, imagem ou programa. Os arquivos são organizados em diretórios
+					 (também chamados de pastas) para criar uma estrutura lógica para organizar e gerenciar arquivos. Os diretórios podem conter arquivos e subdiretórios, formando uma estrutura 
+					 hierárquica semelhante a uma árvore.</li>
+					<br><li><b>Atributos do arquivo:</b> os arquivos têm atributos associados que fornecem informações adicionais sobre o arquivo, como nome, tamanho, datas de criação/modificação, 
+					permissões e propriedade. Esses atributos ajudam no gerenciamento e proteção de arquivos de forma eficaz.</li>
+					<br><li><b>Operações de arquivo:</b> os sistemas de arquivos suportam várias operações em arquivos, incluindo criação, abertura, leitura, gravação, modificação, exclusão e 
+					renomeação de arquivos. Essas operações permitem que usuários e aplicativos interajam com arquivos, manipulem seu conteúdo e gerenciem metadados de arquivo.</li>
+					<br><li><b>Métodos de acesso:</b> os métodos de acesso determinam como os arquivos são lidos e gravados nos dispositivos de armazenamento. Métodos de acesso comuns incluem 
+					acesso sequencial (leitura/gravação de dados de maneira linear), acesso direto (acesso aleatório a locais específicos em um arquivo) e acesso indexado (usando um índice ou chave
+					 para localizar dados rapidamente).</li>
+					<br><li><b>Estrutura de diretórios:</b> a estrutura de diretórios define a organização e a hierarquia dos diretórios dentro de um sistema de arquivos. Ele permite uma 
+					navegação eficiente e gerenciamento de arquivos. As estruturas de diretório comuns incluem diretórios de nível único, diretórios de dois níveis e diretórios estruturados
+					 em árvore.</li>
+					<br><li><b>Métodos de acesso:</b> os métodos de acesso determinam como os arquivos são acessados e recuperados dos dispositivos de armazenamento. Eles incluem acesso sequencial,
+					 acesso direto e acesso indexado. A escolha do método de acesso depende de fatores como a natureza dos dados, requisitos de desempenho e a tecnologia de armazenamento subjacente.</li>
+					<br><li><b>Alocação contígua:</b> na alocação contígua, os arquivos são armazenados em disco como blocos contíguos de espaço em disco. Cada arquivo ocupa um conjunto consecutivo
+					 de blocos de disco. Este método fornece acesso rápido aos arquivos, pois o arquivo inteiro é armazenado de forma contínua. No entanto, sofre com a fragmentação externa, 
+					 onde o espaço livre em disco torna-se disperso ao longo do tempo, dificultando a alocação de blocos contíguos para novos arquivos.</li>
+					<br><li><b> Alocação Vinculada:</b> em alocação vinculada, cada arquivo é dividido em blocos e esses blocos são vinculados usando ponteiros. Cada bloco contém um ponteiro 
+					para o próximo bloco, formando uma estrutura em cadeia. O último bloco de um arquivo contém um ponteiro especial que indica o fim do arquivo. A alocação vinculada elimina a 
+					fragmentação externa, pois cada bloco pode ser alocado independentemente. No entanto, introduz sobrecarga em termos de espaço extra necessário para armazenar os ponteiros, e 
+					a passagem pelos blocos pode ser mais lenta em comparação com a alocação contígua.</li>
+					<br><li><b> Alocação indexada:</b> a alocação indexada usa uma tabela de índice para acompanhar os locais dos blocos de arquivo. Em vez de armazenar os ponteiros em cada 
+					bloco como na alocação vinculada, uma tabela de índice separada (geralmente chamada de bloco de índice ou inode) é mantida para cada arquivo. A tabela de índice contém 
+					entradas que mapeiam números de blocos lógicos para endereços de blocos físicos. Este método fornece acesso rápido aos arquivos, pois a tabela de índice pode ser acessada 
+					diretamente. Ele reduz a sobrecarga em comparação com a alocação vinculada, mas introduz uma limitação no tamanho máximo do arquivo devido ao tamanho da tabela de índice.</li>
+					<br><li><b>Método de Acesso Sequencial Indexado (ISAM):</b>  ISAM é uma técnica de indexação usada para acesso eficiente a arquivos com base em valores de chave. 
+					Ele combina alocação indexada com acesso sequencial. O ISAM usa uma estrutura de índice para localizar registros específicos com base em suas chaves e fornece acesso 
+					sequencial dentro de cada bloco de registros. É comumente usado em sistemas de banco de dados.</li>
+					<br><li><b>Tabela de Alocação de Arquivos (FAT):</b> FAT é um método popular de alocação de arquivos usado em alguns sistemas de arquivos mais antigos, como 
+					FAT16 e FAT32. Ele usa uma tabela chamada Tabela de Alocação de Arquivos para armazenar as informações sobre alocações de arquivos. A FAT contém entradas para cada 
+					bloco de disco, indicando se o bloco está livre ou alocado para um arquivo. O FAT permite uma navegação eficiente no sistema de arquivos, mas pode sofrer fragmentação 
+					com o tempo.</li>
+					<br><li><b>Sistema de Arquivo Estendido (Ext):</b> usa uma combinação de métodos de alocação de blocos, incluindo alocação contígua, alocação vinculada (para arquivos pequenos) 
+					e alocação baseada em extensão (para arquivos grandes). Ele emprega uma estrutura inode para rastrear metadados de arquivos e alocar blocos de forma eficiente. O Ext fornece
+					 flexibilidade, escalabilidade e utilização de armazenamento otimizada para vários tamanhos e tipos de arquivo.</li>
+					<br><li><b>Estrutura de diretórios:</b> a estrutura de diretório fornece uma organização lógica de arquivos e diretórios em um sistema de arquivos. Ele permite que os 
+					usuários naveguem pelos diretórios e localizem arquivos específicos com eficiência. As estruturas de diretório comuns incluem a estrutura hierárquica (usada na maioria dos s
+					istemas operacionais), estrutura plana (todos os arquivos em um único diretório) e estrutura indexada (usando índices para acesso rápido a arquivos).</li>
+				</ul>&nbsp;&nbsp;&nbsp;
+				A segurança nos sistemas operacionais é vital para proteger dados confidenciais, impedir o acesso não autorizado e garantir a integridade do sistema para melhor entende-lo sendo assim veremos
+				 alguns dos principais conceitos de segurança:
+				 <ul>
+					<li><b>Autenticação de usuário:</b> os sistemas operacionais empregam mecanismos de autenticação do usuário, como senhas, biometria ou autenticação multifatorial 
+					para verificar a identidade dos usuários antes de conceder acesso ao sistema.</li>
+					<br><li><b>Controle de acesso:</b> Os mecanismos de controle de acesso regulam e controlam o acesso do usuário a arquivos, diretórios e recursos do sistema. 
+					Isso inclui permissões e privilégios atribuídos a usuários individuais ou grupos de usuários para determinar quais ações eles podem executar em arquivos e diretórios.</li>
+					<br><li><b>Criptografia:</b> técnicas de criptografia são usadas para proteger a confidencialidade dos dados. Os sistemas operacionais fornecem mecanismos de criptografia 
+					para proteger arquivos e comunicações, garantindo que apenas indivíduos autorizados possam acessar e decifrar os dados criptografados.</li>
+					<br><li><b>Auditoria e registro:</b> os sistemas operacionais podem incluir recursos de auditoria e registro para rastrear as atividades do sistema, monitorar as ações do 
+					usuário e identificar quaisquer violações de segurança ou atividades suspeitas. Os logs podem ser analisados para investigar incidentes de segurança e manter a integridade do sistema.</li>
+					<br><li><b>Firewalls e Detecção de Intrusão:</b> firewalls e sistemas de detecção de intrusão são usados para monitorar o tráfego de rede, filtrar conexões de entrada e saída e 
+					detectar evitir possiveis brechas na segurancça.</li>
+				</ul>
+                </p>
+                
+                <br id="bibliografia">
+                <h2>Referência Bibliográfica</h2>
+                
+                <p align="justify">
+                Tanenbaum, A. S., & Woodhull, A. S. (2006). Sistemas operacionais: Projeto e implementação.
+                <br>
+                Machado, F. B., & Maia, L. P. (2004). Arquitetura de sistemas operacionais.
+                <br>
+                Tanenbaum, A. S. (2010). Sistemas operacionais modernos.
+                </p>
+                
+                <div class="doublespace"></div>
+                <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
